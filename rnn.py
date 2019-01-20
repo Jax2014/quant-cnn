@@ -1,9 +1,3 @@
-
-
-# coding: utf-8
-
-# In[1]:
-
 import tensorflow as tf
 import os
 import json
@@ -20,19 +14,14 @@ def read(name):
     f.close()
     return result
 
-# In[2]:
-
 #载入数据集
 list = np.array(read('list'))
 label = np.array(read('label'))
 
-
-
-# 输入图片是28*28
-n_inputs = 48 #输入一行，一行有28个数据
-max_time = 48 #一共28行
-lstm_size = 100 #隐层单元
-n_classes = 4 # 10个分类
+n_inputs = 48 
+max_time = 48
+lstm_size = 100 
+n_classes = 4 
 batch_size = 50 #每批次50个样本
 n_batch = (len(label)-TEST_LEN)// batch_size #计算一共有多少个批次
 
@@ -84,9 +73,5 @@ with tf.Session() as sess:
 
         acc = sess.run(accuracy,feed_dict={x:list[:TEST_LEN],y:label[:TEST_LEN]})
         print ("Iter " + str(epoch) + ", Testing Accuracy= " + str(acc))
-
-
-# In[ ]:
-
 
 
