@@ -11,8 +11,6 @@ def read(name):
     f.close()
     return result
 
-    
-# In[2]:
 
 #载入数据集
 list = np.array(read('list'))
