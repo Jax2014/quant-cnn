@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep  8 15:29:48 2016
-
-@author: root
-"""
 import tensorflow as tf 
 import os
 import json
